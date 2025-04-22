@@ -28,5 +28,3 @@ pip install -r requirements.txt
 
 # Rodar aplicação
 python app.py
-
-
