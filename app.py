@@ -28,4 +28,4 @@ def display_file():
     return render_template('display.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    aapp.run(host='0.0.0.0', debug=True)
