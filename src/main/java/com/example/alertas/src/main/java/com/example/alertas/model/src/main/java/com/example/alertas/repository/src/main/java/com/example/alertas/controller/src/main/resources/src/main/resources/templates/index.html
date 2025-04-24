@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alertas Urbanos</title>
+</head>
+<body>
+  <h1>Alertas Urbanos</h1>
+  <a th:href="@{/new}">Novo Alerta</a>
+  <table border="1" cellpadding="4" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th><th>Descrição</th><th>Categoria</th><th>Latitude</th><th>Longitude</th><th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="alert : ${alerts}">
+        <td th:text="${alert.id}">1</td>
+        <td th:text="${alert.descricao}">Descrição</td>
+        <td th:text="${alert.categoria}">Categoria</td>
+        <td th:text="${alert.latitude}">0.0</td>
+        <td th:text="${alert.longitude}">0.0</td>
+        <td th:text="${alert.status}">Pendente</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
